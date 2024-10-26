@@ -146,14 +146,14 @@ def buy():
     # redirect to index page
     return redirect("/")
 
-@app.route("/personal_touch", methods=["GET", "POST"])
+@app.route("/password", methods=["GET", "POST"])
 @login_required
-def personal_touch():
+def password():
     """ Change Password """
 
     # if method GET, display password change form
     if request.method == "GET":
-        return render_template("personal_touch.html")
+        return render_template("password.html")
 
     # if method POST, change password
     else:
